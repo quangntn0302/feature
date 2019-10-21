@@ -1,0 +1,173 @@
+:root {
+    --color-one: #e84393;
+    --color-two: #6c5ce7;
+
+    --color-text-one: #ffffff;
+}
+
+@keyframes animation {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.clear-float {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to right, var(--color-one), var(--color-two));
+}
+
+h2::selection {
+    background-color: orangered;
+}
+
+.banner-text {
+    font-size: 1.6rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-text ul {
+    list-style: none;
+    margin: 3rem 5rem;
+}
+.banner-text ul li {
+    float:right;
+}
+
+.banner-text ul li:not(:first-child) {
+    margin-right: 5rem;
+}
+
+.banner-text ul li a {
+    text-decoration: none;
+    color: var(--color-text-one);
+    font-weight: bold;
+}
+
+.banner-text .clear-float {
+    font-size: 3rem;
+    color: var(--color-text-one);
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+.animation-area {
+    font-size: 1.6rem;
+    
+}
+.animation-area .box-area {
+
+}
+.animation-area .box-area li {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    list-style: none;
+    display: block;
+    background-color: rgba(255,255,255, .2);
+    animation: animation 20s linear infinite;
+}
+
+.animation-area .box-area li:nth-child(1) {
+    position: absolute;
+    left: 86%;
+    width: 3rem;
+    height: 3rem;
+    list-style: none;
+    display: block;
+    background-color: rgba(255,255,255, .2);
+    animation-delay: 0s;
+}
+
+.animation-area .box-area li:nth-child(2) {
+    position: absolute;
+    left: 12%;
+    width: 4rem;
+    height: 4rem;
+    list-style: none;
+    display: block;
+    background-color: rgba(255,255,255, .2);
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+
+.animation-area .box-area li:nth-child(3) {
+    position: absolute;
+    left: 30%;
+    width: 5rem;
+    height: 5rem;
+    list-style: none;
+    display: block;
+    background-color: rgba(255,255,255, .2);
+    animation-delay: 5.5s;
+}
+
+.animation-area .box-area li:nth-child(4) {
+    position: absolute;
+    left: 70%;
+    width: 6rem;
+    height: 6rem;
+    list-style: none;
+    display: block;
+    background-color: rgba(255,255,255, .2);
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.animation-area .box-area li:nth-child(5) {
+    position: absolute;
+    left: 50%;
+    width: 6rem;
+    height: 6rem;
+    list-style: none;
+    display: block;
+    background-color: rgba(255,255,255, .2);
+    border-radius: 20%;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+
+

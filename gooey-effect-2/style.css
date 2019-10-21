@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.loader {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gooey {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 142px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    filter: contrast(5);
+}
+
+.dot {
+    filter: blur(4px);
+    position: absolute;
+    top: 12px;
+    left: 15px;  
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translateX(0);  
+    animation: dot 10s infinite;
+}
+
+.dots {
+    transform: translateX(0);
+    margin-top: 12px;
+    margin-left: 31px;
+
+
+    animation: dots 10s infinite;
+}
+
+.dots span {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    
+    border-radius: 50%;
+    
+}
+
+.dots span:nth-child(1) {
+    background: blue;
+    filter: blur(4px);
+}
+
+.dots span:nth-child(2) {
+    background: orange;
+    filter: blur(4px);
+}
+
+.dots span:nth-child(3) {
+    background: orangered;
+    filter: blur(4px);
+}
+
+@keyframes dot {
+    50% {
+      transform: translateX(96px);
+    }
+  }
+  
+  @keyframes dots {
+    50% {
+      transform: translateX(-31px);
+    }
+  }
+  

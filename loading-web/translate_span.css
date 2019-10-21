@@ -1,0 +1,35 @@
+.loader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > span {
+    display: inline-block;
+    background-color: purple;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transform:  translate3d(0);
+    margin: 0 8px;
+    animation: bounce .6s alternate infinite;
+}
+
+.loader > span:nth-child(2) {
+    background-color: palevioletred;
+    animation-delay: .2s;
+}
+
+.loader > span:nth-child(3) {
+    background-color: orangered;
+    animation-delay: .4s;
+}
+
+@keyframes bounce {
+    to {
+        width: 16px;
+        height: 16px;
+        transform:  translate3d(0, -16px, 0);
+    }
+}
