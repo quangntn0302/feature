@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+}
+
+.card {
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+}
+
+.front {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.front img {
+    width: 12rem;
+    height: 12rem;
+}
+
+.back {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform .5s;
+}
+
+.back img {
+    background-color: black;
+    width: 12rem;
+    height: 12rem;
+}
+
+.card:hover > .front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back {
+    transform: perspective(600px) rotateY(0deg);
+}
